@@ -41,6 +41,9 @@ public class IssuanceConfigProperties {
     private String keyStorePassword;
     private String certAlias;
     private String privateKeyPassword;
+    private String type;
+    private Boolean enabled;
+    private Boolean enableDebug;
     @NotBlank
     @Size(max = 2)
     private String countryCode;

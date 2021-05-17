@@ -39,8 +39,12 @@ springdoc:
     enabled: true
   swagger-ui:
     path: /swagger
+wallet:
+  enabled: true
+dgcihelper: 
+  enabled: false
 issuance:
-  dgciPrefix: dgci:V1:DE
+  dgciPrefix: DGCI:V1:DE
   keyStoreFile: certs/test.jks
   keyStorePassword: dgca
   certAlias: dev_ec
@@ -52,6 +56,9 @@ issuance:
     vaccination: 365
     recoverty: 365
     test: 60
+  type: frontend
+  enabled: true 
+  enableDebug: false
 dgc:
   gateway:
     connector:
