@@ -33,7 +33,7 @@ public class BackendIssuerController {
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "signed edgc qr code created"),
         @ApiResponse(responseCode = "400", description = "wrong issue data")})
-    @PostMapping(value = "/issue", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/issue", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<EgdcCodeData> createEdgc(@Valid @RequestBody Eudgc eudgc) {
         EgdcCodeData egdcCodeData = dgciService.createEdgc(eudgc);
         return ResponseEntity.ok(egdcCodeData);
